@@ -171,6 +171,9 @@ class MSO2:
     
             def set_vertical_scale(self, scale: float):
                 self.handle.write(f"{self.identifier.value}:scale {scale}")
+    
+            def set_attenuation(self, attenuation: float):
+                self.handle.write(f"{self.identifier.value}:probefunc:extatten {attenuation}")
  
         return ChannelProxy(key, self.handle)
 

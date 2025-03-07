@@ -13,6 +13,7 @@ scope.set_horizontal_scale(scale=50e-3)
 scope[MSO2.Channel.CH1].enable()
 
 scope[MSO2.Channel.CH1].set_vertical_scale(scale=500e-3)
+scope[MSO2.Channel.CH1].set_attenuation(10)
 
 # configure trigger
 scope.set_trigger(0.5,
