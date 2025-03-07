@@ -12,7 +12,7 @@ scope.set_horizontal_scale(scale=50e-3)
 # enable channels and set vertical scale
 scope[MSO2.Channel.CH1].enable()
 
-scope[MSO2.Channel.CH1].set_vertical_scale(scale=500e-3)
+scope[MSO2.Channel.CH1].set_scale(scale=500e-3)
 scope[MSO2.Channel.CH1].set_attenuation(10)
 
 # configure trigger

@@ -169,7 +169,7 @@ class MSO2:
             def disable(self):
                 self.handle.write(f"select:{self.identifier.value} off")
     
-            def set_vertical_scale(self, scale: float):
+            def set_scale(self, scale: float):
                 self.handle.write(f"{self.identifier.value}:scale {scale}")
     
             def set_attenuation(self, attenuation: float):
