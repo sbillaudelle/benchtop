@@ -1,7 +1,7 @@
 from benchtop.scope import *
 
 # connect to the oscillscope
-scope = MSO2("eis-mso2.lan.ini.uzh.ch")
+scope = MSO2("my.scope.local")
 scope.set_timeout(10.0)
 
 scope.reset()
