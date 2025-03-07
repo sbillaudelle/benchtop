@@ -22,8 +22,8 @@ class MSO2:
 
     class TriggerCoupling(enum.Enum):
         DC = "dc"
-        HFReject = "hfrej"
-        LFReject = "lfrej"
+        HF_REJECT = "hfrej"
+        LF_REJECT = "lfrej"
 
     class AcquisitionMode(enum.Enum):
         SAMPLE = "sample"
