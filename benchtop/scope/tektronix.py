@@ -20,6 +20,10 @@ class MSO2:
         FALLING = "fall"
         EITHER = "EITHER"
 
+    class TriggerMode(enum.Enum):
+        NORMAL = "normal"
+        AUTO = "auto"
+
     class TriggerCoupling(enum.Enum):
         DC = "dc"
         HF_REJECT = "hfrej"
@@ -54,11 +58,13 @@ class MSO2:
                     level: float=0.0,
                     channel: Channel=Channel.CH1,
                     edge: TriggerEdge=TriggerEdge.RISING,
+                    mode: TriggerMode=TriggerMode.NORMAL,
                     coupling: TriggerCoupling=TriggerCoupling.DC
                     ):
         self.handle.write(f"trigger:A:edge:source {channel.value}")
         self.handle.write(f"trigger:A:level:{channel.value} {level}")
         self.handle.write(f"trigger:A:edge:slope {edge.value}")
+        self.handle.write(f"trigger:A:mode {mode.value}")
         self.handle.write(f"trigger:A:edge:coupling:{channel.value} {coupling.value}")
 
     def set_horizontal_scale(self,
