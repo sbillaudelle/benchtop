@@ -25,3 +25,4 @@ Feel free to request or contribute support for new features or devices, and to r
 Currently, *benchtop* supports the following devices:
 
 - Tektronix MSO2-series oscilloscopes
+- Tektronix MSO4-series oscilloscopes

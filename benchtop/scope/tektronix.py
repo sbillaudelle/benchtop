@@ -8,7 +8,7 @@ import pyvisa as visa
 # scope.handle.write("horizontal:position 0")
 # scope.handle.write("CH1:offset 0e-3")
 
-class MSO2:
+class MSOBase:
     class Channel(enum.Enum):
         CH1 = "CH1"
         CH2 = "CH2"
@@ -177,3 +177,10 @@ class MSO2:
  
         return ChannelProxy(key, self.handle)
 
+
+class MSO2(MSOBase):
+    pass
+
+
+class MSO4(MSOBase):
+    pass
